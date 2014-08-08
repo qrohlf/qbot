@@ -1,1 +1,1 @@
-web: bin/hubot -a irc --name q-bot
+web: bin/hubot -a irc
