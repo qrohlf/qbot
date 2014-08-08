@@ -12,7 +12,7 @@ module.exports = (robot) ->
 
 
   robot.hear /qrohlf/i, (msg) ->
-    push.send "Mentioned in "+msg.message.room, msg.message.text, (err, res) ->
+    push.send "Mentioned by "+msg.message.user.name+" in "+msg.message.room, msg.message.text, (err, res) ->
       if err
         robot.logger.error "Error sending pushover notification:"
         robot.logger.error err
