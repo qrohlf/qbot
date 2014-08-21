@@ -12,7 +12,7 @@ module.exports = (robot) ->
     imageMe msg, msg.match[3], (url) ->
       msg.send url
 
-  robot.respond /animate( me)? (.*)/i, (msg) ->
+  robot.respond /(animate|gif)( me)? (.*)/i, (msg) ->
     imageMe msg, msg.match[2], true, (url) ->
       msg.send url
 
