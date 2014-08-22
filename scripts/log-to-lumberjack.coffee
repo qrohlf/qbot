@@ -17,6 +17,7 @@
 module.exports = (robot) ->
 
   robot.hear /.*/i, (msg) ->
+    return unless msg.message.room 
     data = JSON.stringify({
       room: {
         name: msg.message.room
