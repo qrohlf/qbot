@@ -41,7 +41,7 @@ module.exports = (robot) ->
           robot.logger.error body
 
   robot.hear /.*/i, (msg) ->
-    # return unless msg.message.room
+    return unless msg.message.room
     log_message(msg.message.room, msg.message.user.name, msg.message.text)
 
   # Override send methods in the Response prototype so that we can log Hubot's replies
